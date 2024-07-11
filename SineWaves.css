@@ -1,0 +1,52 @@
+.range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(187, 187, 187);
+    border-radius: 100%;
+}
+
+input[type="range"]{
+    -webkit-appearance: none;
+    width: 400px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 12px;
+}
+
+.controls{
+    position: fixed;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    gap: 12px
+}
+
+.control{
+    display: flex;
+    justify-content: start;
+
+    gap: 20px
+}
+
+.controls select{
+    -webkit-appearance: none;
+    display: flex;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(85, 85, 85, 0.527);
+    color:white;
+    border-radius: 28px;
+}
+
+select:focus{
+    outline: none;
+}
+
+select option{
+    background-color: rgba(14, 14, 14, 0.527);  
+}

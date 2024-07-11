@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Fields</title>
+    <link rel="stylesheet" href="navigation.css">
+
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        canvas{
+            position: absolute;
+            background-color: rgb(12,12,12);
+        }
+
+        input[type="number"]{
+            z-index: 100;
+            display: flex;
+            color: white;
+            width: 200px;
+            height: 20px;
+            background-color: transparent;
+            border: 2px solid white;
+            border-radius: 12px;
+            font-size: 30px;
+            padding: 10px;
+        }
+
+        input[type="number"]:focus{
+            outline: none;
+        }
+
+        .controls{
+            position: fixed;
+            color: white;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            gap: 18px
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div>
+            <button onclick="navigate('Galaxy')" href="Galaxy.html">Galaxy</a>
+            <button onclick="navigate('AudioVisualizer')" href="AudioVisualizer.html">Audio Visualizer</a>
+            <button onclick="navigate('CircularMotion')" href="CircularMotion.html">Circular Motion</a>
+            <button onclick="navigate('FlowFields')" href="FlowFields.html">Flow Fields</a>
+            <button onclick="navigate('SineWaves')" href="SineWaves.html">Sine Waves</a>
+            <button onclick="navigate('GenerativeArt')" href="GenerativeArt.html">Generative art</as>
+        </div>
+    </nav>
+    <script src="navigation.js"></script>
+
+    <canvas></canvas>
+
+    <div class="controls">
+
+        <div>
+            <label for="no-particles">Number of particles</label>
+            <input type="number" value="100" step="0.1" id="no-particles">
+        </div>
+
+        <div>
+            <label for="cell-size">Cell Size</label>
+            <input type="number" value="10" step="0.1" id="cell-size">
+        </div>
+
+        <div>
+            <label for="curve">Curve</label>
+            <input type="number" value="5.3" step="0.1" id="curve">
+        </div>
+
+        <div>
+            <label for="zoom">Zoom</label>
+            <input type="number" value="0.04" step="0.01" id="zoom">
+        </div>
+
+        <div>
+            <label for="lineWidth">Line Width</label>
+            <input type="number" value="1" step="0.1" id="lineWidth">
+        </div>
+
+    </div>
+
+    <script src="FlowFields.js"></script>
+</body>
+</html>

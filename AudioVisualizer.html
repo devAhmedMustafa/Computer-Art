@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Visualizer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <link rel="stylesheet" href="navigation.css">
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        canvas{
+            position: absolute;
+            z-index: 1;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            gap: 12px;
+            padding: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn{
+            width: 110px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: azure;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            text-align: center;
+            border: none;
+            z-index: 100;
+            cursor: pointer;
+        }
+
+        .back {
+            background: linear-gradient(270deg, #0e0e0e, #222222);
+            background-size: 400% 400%;
+
+            -webkit-animation: AnimationName 10s ease infinite;
+            -moz-animation: AnimationName 10s ease infinite;
+            animation: AnimationName 10s ease infinite;
+        }
+
+        @-webkit-keyframes AnimationName {
+            0%{background-position:66% 0%}
+            50%{background-position:35% 100%}
+            100%{background-position:66% 0%}
+        }
+        @-moz-keyframes AnimationName {
+            0%{background-position:66% 0%}
+            50%{background-position:35% 100%}
+            100%{background-position:66% 0%}
+        }
+        @keyframes AnimationName {
+            0%{background-position:66% 0%}
+            50%{background-position:35% 100%}
+            100%{background-position:66% 0%}
+        }
+
+        .options{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10%;
+            gap: 14px
+        }
+    </style>
+
+</head>
+<body>
+
+    <nav>
+        <div>
+            <button onclick="navigate('Galaxy')" href="Galaxy.html">Galaxy</a>
+            <button onclick="navigate('AudioVisualizer')" href="AudioVisualizer.html">Audio Visualizer</a>
+            <button onclick="navigate('CircularMotion')" href="CircularMotion.html">Circular Motion</a>
+            <button onclick="navigate('FlowFields')" href="FlowFields.html">Flow Fields</a>
+            <button onclick="navigate('SineWaves')" href="SineWaves.html">Sine Waves</a>
+            <button onclick="navigate('GenerativeArt')" href="GenerativeArt.html">Generative art</as>
+        </div>
+    </nav>
+    <script src="navigation.js"></script>
+
+    <div class="container back">
+        
+        <canvas></canvas>
+
+        <div class="options">
+            <label for="fileupload" class="btn">Choose a song</label>
+            <input type="file" style="display: none;" id="fileupload" accept="audio/*"/>
+            <audio id="audio" controls style="z-index: 100; width: 1000px"></audio>
+        </div>
+
+    </div>
+
+    <script src="AudioVisualizer.js"></script>
+    
+</body>
+</html>

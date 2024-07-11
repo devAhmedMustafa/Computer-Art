@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative Art</title>
+    <link rel="stylesheet" href="navigation.css">
+
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        canvas{
+            position: absolute;
+            background-color: rgb(10,10,10);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div>
+            <button onclick="navigate('Galaxy')" href="Galaxy.html">Galaxy</a>
+            <button onclick="navigate('AudioVisualizer')" href="AudioVisualizer.html">Audio Visualizer</a>
+            <button onclick="navigate('CircularMotion')" href="CircularMotion.html">Circular Motion</a>
+            <button onclick="navigate('FlowFields')" href="FlowFields.html">Flow Fields</a>
+            <button onclick="navigate('SineWaves')" href="SineWaves.html">Sine Waves</a>
+            <button onclick="navigate('GenerativeArt')" href="GenerativeArt.html">Generative art</as>
+        </div>
+    </nav>
+    <script src="navigation.js"></script>
+
+    <canvas></canvas>
+
+    <script src="GenerativeArt.js"></script>
+    
+</body>
+</html>
