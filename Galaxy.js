@@ -1,6 +1,6 @@
 const canvas = document.querySelector('canvas');
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.height = window.innerHeight+500;
 
 const x = canvas.width/2;
 const y = canvas.height/2;
@@ -11,7 +11,7 @@ const colorPallete = ['#6f2dbd', '#a663cc', '#b298dc', '#b9faf8', '#b8d0eb']
 
 addEventListener('resize', (event)=>{
     canvas.width = window.innerWidth;
-    canvas.height = windows.innerHeight;
+    canvas.height = windows.innerHeight+500;
     Init()
 })
 
@@ -73,7 +73,7 @@ function Init(){
     let canvasWidth = canvas.width;
     let canvasHeight = canvas.height;
 
-    for (var i = 0; i < 100; i++){
+    for (var i = 0; i < 300; i++){
         let randomRadius = RandomWithinRange(1, 3)
         let randomColor = parseInt(Math.random() * colorPallete.length)
 
@@ -124,8 +124,6 @@ function Animate(){
     }
     
     radians += 0.001 * speed;
-
-
 
 }
 
